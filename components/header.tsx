@@ -24,18 +24,10 @@ export function Header() {
     };
   }, [scrolled]);
 
-  const handleFeatureClick = () => {
-    const featuresSection = document.getElementById('features');
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
-
-  const handleContactClick = () => {
-    const contactSection = document.getElementById('cta');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
@@ -54,21 +46,39 @@ export function Header() {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={handleFeatureClick}
+            onClick={() => scrollToSection('home')}
+            className="text-foreground/90 hover:text-foreground transition-colors"
+          >
+            Home
+          </button>
+          <button 
+            onClick={() => scrollToSection('features')}
             className="text-foreground/90 hover:text-foreground transition-colors"
           >
             Features
           </button>
           <button 
-            onClick={handleContactClick}
+            onClick={() => scrollToSection('pricing')}
             className="text-foreground/90 hover:text-foreground transition-colors"
           >
-            Contacts
+            Pricing
+          </button>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="text-foreground/90 hover:text-foreground transition-colors"
+          >
+            About
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="text-foreground/90 hover:text-foreground transition-colors"
+          >
+            Contact
           </button>
           <Button 
             size="lg" 
             className="gradient-bg text-white"
-            onClick={handleContactClick}
+            onClick={() => scrollToSection('contact')}
           >
             Get Started
           </Button>
@@ -92,21 +102,39 @@ export function Header() {
         <div className="md:hidden bg-background border-t mt-4">
           <div className="recruo-container py-4 space-y-4">
             <button 
-              onClick={handleFeatureClick}
+              onClick={() => scrollToSection('home')}
+              className="block w-full text-left p-2 hover:text-accent"
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('features')}
               className="block w-full text-left p-2 hover:text-accent"
             >
               Features
             </button>
             <button 
-              onClick={handleContactClick}
+              onClick={() => scrollToSection('pricing')}
               className="block w-full text-left p-2 hover:text-accent"
             >
-              Contacts
+              Pricing
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="block w-full text-left p-2 hover:text-accent"
+            >
+              About
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="block w-full text-left p-2 hover:text-accent"
+            >
+              Contact
             </button>
             <Button 
               size="lg" 
               className="w-full gradient-bg text-white"
-              onClick={handleContactClick}
+              onClick={() => scrollToSection('contact')}
             >
               Get Started
             </Button>
