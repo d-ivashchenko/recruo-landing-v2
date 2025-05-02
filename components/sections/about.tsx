@@ -185,32 +185,32 @@ export default function About() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <TeamMember 
-                name="Emma Richardson"
-                title="CEO & Co-Founder"
-                description="Former HR executive with 15+ years of experience transforming recruitment in tech companies."
+                name="Oleh Datskiv"
+                title="CEO"
+                description="Here is a description."
                 imageUrl="/images/team/emma-richardson.jpg"
                 linkedinUrl="#"
                 twitterUrl="#"
               />
               <TeamMember 
-                name="David Zhang"
-                title="CTO & Co-Founder"
-                description="AI researcher and engineer passionate about applying machine learning to solve real-world problems."
-                imageUrl="/images/team/xavier.jpeg"
+                name="Nikita Kiselov"
+                title="CTO"
+                description="Here is a description."
+                imageUrl="/images/team/emma-richardson.jpeg"
                 linkedinUrl="#"
                 twitterUrl="#"
               />
               <TeamMember 
-                name="Sophia Patel"
+                name="Volodymyr Antoshkiv"
                 title="Head of Product"
-                description="Product leader focused on creating intuitive, powerful tools that transform how teams work."
+                description="Here is a description."
                 imageUrl="/images/team/sophia-patel.jpg"
                 linkedinUrl="#"
               />
               <TeamMember 
-                name="Marcus Johnson"
+                name="Alex Yashchuk"
                 title="Head of Customer Success"
-                description="Dedicated to ensuring customers achieve their hiring goals and maximize their ROI with Recruo."
+                description="Here is a description."
                 imageUrl="/images/team/marcus-johnson.jpg"
                 linkedinUrl="#"
                 twitterUrl="#"

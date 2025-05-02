@@ -1,7 +1,16 @@
+"use client"
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PlayCircle, CheckCircle } from 'lucide-react';
 
 export default function Hero() {
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('demo');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative min-h-screen flex items-center">
       {/* Background */}
@@ -23,16 +32,27 @@ export default function Hero() {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8">
-              Revolutionize your recruitment with AI-powered screening and interviews. 
+              Enhance your recruitment with AI-powered screening and interviews. 
               Make data-driven hiring decisions that save time and find the best talent.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="gradient-bg text-white">
-                Get Started for Free
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="gap-2">
+              <a 
+                href="https://app.recruo.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="gradient-bg text-white w-full sm:w-auto">
+                  Get Started for Free
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="gap-2"
+                onClick={scrollToDemo}
+              >
                 <PlayCircle className="h-5 w-5" />
                 Watch Demo
               </Button>

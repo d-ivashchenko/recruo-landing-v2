@@ -75,13 +75,18 @@ export function Header() {
           >
             Contact
           </button>
-          <Button 
-            size="lg" 
-            className="gradient-bg text-white"
-            onClick={() => scrollToSection('contact')}
+          <a 
+            href="https://app.recruo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Get Started
-          </Button>
+            <Button 
+              size="lg" 
+              className="gradient-bg text-white"
+            >
+              Get Started
+            </Button>
+          </a>
         </nav>
 
         {/* Mobile menu button */}
@@ -131,13 +136,19 @@ export function Header() {
             >
               Contact
             </button>
-            <Button 
-              size="lg" 
-              className="w-full gradient-bg text-white"
-              onClick={() => scrollToSection('contact')}
+            <a 
+              href="https://app.recruo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full"
             >
-              Get Started
-            </Button>
+              <Button 
+                size="lg" 
+                className="w-full gradient-bg text-white"
+              >
+                Get Started
+              </Button>
+            </a>
           </div>
         </div>
       )}
